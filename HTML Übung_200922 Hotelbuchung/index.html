@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Übung 200922 Hotelbuchung</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1> Ihre Zimmerbuchung</h1>
+    </header>
+    <div class="container">
+        <h2>Persönliches</h2>
+        <div>
+            <form method="POST" action="contact.php">
+                <div class="sex">
+                    <input type="radio" name="sex" id=f value="f">
+                    <label for="f">Frau</label>
+                    <input type="radio" name="sex" id=m value="m">
+                    <label for="m">Herr</label>
+                </div>
+                <div style="clear:both;">
+                    <select class="titel" name="titel" id="titel" multiple>
+                        <option value="ba">BA</option>
+                        <option value="mag">Mag</option>
+                        <option value="ma">MA</option>
+                        <option value="dr">Dr.</option>
+                        <option value="drdr">Dr. Dr.</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" name="firstname" placeholder="Vorname*" required />
+                    <label for="firstname"></label>
+                    <input type="text" name="lastname" placeholder="Nachname*" required />
+                    <label for="lastname"></label>
+                </div>
+                <div>
+                    <label for="age">Geburtsdatum:</label>
+                    <input type="date" name="age" required />
+                </div>
+                <div>
+                    <label for="phone"></label>
+                    <input type="tel" name="phone" placeholder="Telefonnummer*" minlength="7" required />
+
+                    <label for="mail"></label>
+                    <input type="mail" name="mail" placeholder="E-Mail*" minlength="5" required />
+                </div>
+                <h2> Aufenthalt</h2>
+                <div>
+                    <label for="checkin">Datum der Anreise:*</label>
+                    <input type="date" name="checkin" required />
+                    <label for="checkout">Datum der Abreise:*</label>
+                    <input type="date" name="checkout" required />
+                </div>
+
+                <h2>Ich buche folgendes Zimmer:*</h2>
+                <div>
+                    <input type="radio" name="room" id=spring value="spring">
+                    <label for="spring">Frühlingszimmer</label>
+                </div>
+                <div>
+                    <input type="radio" name="room" id=summer value="summer">
+                    <label for="summer">Sommerzimmer</label>
+                </div>
+                <div>
+                    <input type="radio" name="room" id=fall value="fall">
+                    <label for="fall">Herbstzimmer</label>
+                </div>
+                <div>
+                    <input type="radio" name="room" id=winter value="winter">
+                    <label for="winter">Winterzimmer</label>
+                </div>
+
+                <h2>Ich habe Interesse an folgenden Angeboten:</h2>
+                <div>
+                    <input type="checkbox" id="massage" name="massage" />
+                    <label for="massage">Massage</label>
+                    <input type="checkbox" id="spa" name="spa" />
+                    <label for="spa">Spa</label>
+                    <input type="checkbox" id="swimming" name="swimming" />
+                    <label for="swimming">Schwimmen</label>
+                    <input type="checkbox" id="tennis" name="tennis" />
+                    <label for="tennis">Tennis</label>
+                    <input type="checkbox" id="movie" name="movie" />
+                    <label for="movie">Kinoabend</label>
+                    <input type="checkbox" id="bowling" name="bowling" />
+                    <label for="bowling">Bowling</label>
+                </div>
+                <h2>Bezahlung</h2>
+
+                <div>
+                    <label for="payment">Ich wähle folgende Zahlungsart:</label>
+                    <select name="payment" id="payment">
+                        <option value="sofort">Sofortüberweisung</option>
+                        <option value="creditcard">Kreditkarte</option>
+                        <option value="bill">Rechnung</option>
+                        <option value="prepayment">Vorkasse</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="creditcardnumber"></label>
+                    <input name="creditcardnumber" id="creditcard" placeholder="Kreditkartennummer">
+                    </input>
+                </div>
+
+                <div class="upload"></div>
+                <label for="myfile">Überweisungsbestätigung hochladen (bei Vorkasse) </label>
+                <input type="file" name="myfile" />
+                <button type="submit">Absenden</button>
+
+        </div>
+        <p>* Pflichtfelder</p>
+        </form>
+
+        <footer>
+        </footer>
+    </div>
+</body>
+
+</html>
