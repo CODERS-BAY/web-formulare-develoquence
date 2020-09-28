@@ -12,16 +12,17 @@
 </head>
 
 <body>
-
     <header>
-        <h1> Ihre Zimmerbuchung</h1>
+        <div id="mainimage">
+            <h1>Ihre Zimmerbuchung</h1>
+        </div>
     </header>
     <div class="container">
-        <h2>Persönliches</h2>
         <div>
             <form method="POST" action="contact.php">
+                <h2>Persönliches:</h2>
                 <div class="sex">
-                    <input type="radio" name="sex" id=f value="f">
+                    <input type="radio" name="sex" id=f value="f" checked>
                     <label for="f">Frau</label>
                     <input type="radio" name="sex" id=m value="m">
                     <label for="m">Herr</label>
@@ -35,32 +36,30 @@
                         <option value="drdr">Dr. Dr.</option>
                     </select>
                 </div>
-                <div>
+                <div class="topmargin">
                     <input type="text" name="firstname" placeholder="Vorname*" required />
                     <label for="firstname"></label>
                     <input type="text" name="lastname" placeholder="Nachname*" required />
                     <label for="lastname"></label>
                 </div>
-                <div>
+                <div class="topmargin">
                     <label for="age">Geburtsdatum:</label>
                     <input type="date" name="age" required />
                 </div>
-                <div>
+                <div class="topmargin">
                     <label for="phone"></label>
-                    <input type="tel" name="phone" placeholder="Telefonnummer*" minlength="7" required />
-
+                    <input type="tel" name="phone" placeholder="Telefonnummer*" class=left minlength="7" required />
                     <label for="mail"></label>
                     <input type="mail" name="mail" placeholder="E-Mail*" minlength="5" required />
                 </div>
-                <h2> Aufenthalt</h2>
+                <h2> Aufenthalt:</h2>
                 <div>
                     <label for="checkin">Datum der Anreise:*</label>
-                    <input type="date" name="checkin" required />
+                    <input type="date" name="checkin" required style="margin-right: 10px;"/>
                     <label for="checkout">Datum der Abreise:*</label>
                     <input type="date" name="checkout" required />
                 </div>
-
-                <h2>Ich buche folgendes Zimmer:*</h2>
+                <h3 style="margin-top: 20px;">Ich buche folgendes Zimmer:*</h3>
                 <div>
                     <input type="radio" name="room" id=spring value="spring">
                     <label for="spring">Frühlingszimmer</label>
@@ -77,8 +76,7 @@
                     <input type="radio" name="room" id=winter value="winter">
                     <label for="winter">Winterzimmer</label>
                 </div>
-
-                <h2>Ich habe Interesse an folgenden Angeboten:</h2>
+                <h3>Ich habe Interesse an folgenden Angeboten:</h3>
                 <div>
                     <input type="checkbox" id="massage" name="massage" />
                     <label for="massage">Massage</label>
@@ -93,36 +91,29 @@
                     <input type="checkbox" id="bowling" name="bowling" />
                     <label for="bowling">Bowling</label>
                 </div>
-                <h2>Bezahlung</h2>
-
+                <h2>Bezahlung:</h2>
                 <div>
                     <label for="payment">Ich wähle folgende Zahlungsart:</label>
                     <select name="payment" id="payment">
                         <option value="sofort">Sofortüberweisung</option>
-                        <option value="creditcard">Kreditkarte</option>
+                        <option value="credit">Kreditkarte</option>
                         <option value="bill">Rechnung</option>
                         <option value="prepayment">Vorkasse</option>
                     </select>
                 </div>
-
-                <div>
-                    <label for="creditcardnumber"></label>
-                    <input name="creditcardnumber" id="creditcard" placeholder="Kreditkartennummer">
-                    </input>
+                <div class="topmargin table">
+                    <label for="cdnumber"></label>
+                    <input name="cdnumber" id="cdnumer" class="left" placeholder="Kreditkartennummer"/>
                 </div>
-
-                <div class="upload"></div>
-                <label for="myfile">Überweisungsbestätigung hochladen (bei Vorkasse) </label>
-                <input type="file" name="myfile" />
-                <button type="submit">Absenden</button>
-
+                <div class="topmargin">
+                    <label for="upload" id=upload> Überweisungsbestätigung hochladen (bei Vorkasse):</label>
+                    <input type=file name="upload" id="uplad"> </input>
+                <button type="submit" class="table">Absenden</button>
+                </div>
         </div>
-        <p>* Pflichtfelder</p>
         </form>
-
         <footer>
         </footer>
     </div>
 </body>
-
 </html>
